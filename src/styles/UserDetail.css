@@ -1,0 +1,17 @@
+/* UserDetail.css */
+.user-detail {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-detail p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.user-detail .label {
+    font-weight: bold;
+}

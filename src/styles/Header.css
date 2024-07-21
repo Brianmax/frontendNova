@@ -1,0 +1,30 @@
+/* Header.css */
+.navBar {
+    background-color: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar h1 {
+    color: white;
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #0056b3;
+}
