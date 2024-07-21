@@ -10,7 +10,7 @@ const UpdateProfile = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const [successMessage, setSuccessMessage] = useState(null);  // Nuevo estado para el mensaje de éxito
+    const [successMessage, setSuccessMessage] = useState(null);
     const token = localStorage.getItem('authToken');
     const decodedToken = jwtDecode(token);
     const userId = decodedToken.id;
@@ -25,7 +25,7 @@ const UpdateProfile = () => {
         }
 
         try {
-            const response = await fetch(`http://127.0.0.1:3001/api/v1/users/${userId}`, {
+            const response = await fetch(`https://backend-node-weathered-waterfall-3385.fly.dev/api/v1/users/${userId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -59,14 +59,14 @@ const UpdateProfile = () => {
             console.log(data);
         } catch (error) {
             setError(error.message);
-            setSuccessMessage(null);  // Limpiar el mensaje de éxito en caso de error
+            setSuccessMessage(null);
             console.error('Error:', error);
         }
     };
 
     const getUsuario = async () => {
         try {
-            const response = await fetch(`http://127.0.0.1:3001/api/v1/users/${userId}`, {
+            const response = await fetch(`https://backend-node-weathered-waterfall-3385.fly.dev/api/v1/users/${userId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ const UpdateProfile = () => {
                         value={usuario}
                         onChange={(e) => setUsuario(e.target.value)}
                     />
-                    <small>El usuario es requerido y debe ser una cadena de texto sin números ni caracteres especiales.</small>
+                    <small>El usuario es requerido y debe ser una cadena de texto. Puede contener _ y numeros</small>
                 </div>
                 <div>
                     <input

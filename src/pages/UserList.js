@@ -12,7 +12,7 @@ const UsersList = () => {
 
     const getUsers = async () => {
         try {
-            const response = await fetch(`http://127.0.0.1:3001/api/v1/users?page=${page}&limit=10`, {
+            const response = await fetch(`https://backend-node-weathered-waterfall-3385.fly.dev/api/v1/users?page=${page}&limit=10`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

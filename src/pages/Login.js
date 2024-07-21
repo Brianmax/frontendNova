@@ -13,7 +13,7 @@ const Login = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://127.0.0.1:3001/login', {
+            const response = await fetch('https://backend-node-weathered-waterfall-3385.fly.dev/api/v1/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

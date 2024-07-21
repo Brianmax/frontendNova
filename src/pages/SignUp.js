@@ -16,7 +16,7 @@ const SignUp = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch("http://127.0.0.1:3001/users", {
+            const response = await fetch("https://backend-node-weathered-waterfall-3385.fly.dev/api/v1/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -77,7 +77,7 @@ const SignUp = () => {
                         value={usuario}
                         onChange={(e) => setUsuario(e.target.value)}
                     />
-                    <small>El usuario es requerido y debe ser una cadena de texto sin números ni caracteres especiales.</small>
+                    <small>El usuario es requerido y debe ser una cadena de texto. Puede contener _ y numeros</small>
                 </div>
                 <div>
                     <input
